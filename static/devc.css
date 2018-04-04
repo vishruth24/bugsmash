@@ -1,0 +1,98 @@
+body {
+    background: #E5E4DF;
+    color: #000305;
+    font-size: 87.5%; /* Base font size: 14px */
+    font-family:'Verdana', 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.429;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    display: inline;
+}
+
+#content {
+    position: relative;
+    top: 50px;
+    left:50px;
+    min-height: 600px;
+    min-width: 1000px;
+    width: 100%;
+    height: 90%;
+}
+
+#code {
+    position: relative;
+    height: 60%;
+    min-height: 350px;
+    min-width: 400px;
+    left: 10px;
+    top: 5px;
+    width: 48%;
+}
+
+#result {
+    position: relative;
+    float: top;
+    height: 60%;
+    min-height: 350px;
+    min-width: 400px;
+    left: 10px;
+    right: 10px;
+    top: 5px;
+    width: 48%;
+}
+
+
+#launch-button {
+    position: relative;
+    right: 0px;
+}
+
+.head-section {
+    position: relative;
+    top: 0px;
+    font-weight:bold;
+}
+
+#title-code {
+    position: relative;
+    left: 5px;
+}
+
+#title-result {
+    position: relative;
+    left: 15px;
+}
+
+#title-compile{
+    position: relative;
+    left: 5px;
+}
+
+#text-code, #text-code-ace {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 80%;
+}
+
+#text-code-ace {
+    padding: 2px;
+    border: 1px solid rgb(169, 169, 169);
+}
+
+#text-result {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 80%;
+}
+
+
+
+.hidden {
+    display: none;
+}

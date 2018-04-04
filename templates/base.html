@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>BugSmash</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/static/devc.css">
+</head>
+<body id="index" class="home">
+    <style>
+    body {
+background-image: url("/static/bg.jpg");
+}
+    </style>
+
+
+<div id="links">
+
+</div>
+<div id="content">
+    <!-- ************  CODING ZONE  ************ -->
+    <div id="code">
+        <form method="post" action="{{ url_for(target) }}">
+
+            <div id="title-code" class="head-section">
+              Source Code
+              <div class="">
+                  {{ statement }}
+
+              </div> <br><br>
+            </div>
+            <input id="launch-button" class="head-section" type="submit" value="Launch" />
+            {% block code %}
+            {% endblock %}
+        </form>
+    </div>
+
+    <!-- ************ RUNNING ZONE RESULTS ************ -->
+
+    <div id="result">
+        {% block run %}
+        {% endblock %}
+    </div>
+
+<div id="compile">
+    <center><a href="/{{next}}"> <button type="button" name="NEXT">Next Question</button></a></center>
+</div>
+
+</body>
+</html>
