@@ -1,49 +1,69 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>BugSmash</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="/static/devc.css">
-</head>
-<body id="index" class="home">
-    <style>
-    body {
-background-image: url("/static/bg.jpg");
-}
-    </style>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/css/custom.css">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" >
+    <title>Bug Smash!</title>
+  </head>
+  <body>
+      <style>
+      body {
+  background-image: url("/static/bg.jpg");
+  }
+      </style>
 
-<div id="links">
-
-</div>
-<div id="content">
-    <!-- ************  CODING ZONE  ************ -->
-    <div id="code">
-        <form method="post" action="{{ url_for(target) }}">
-
-            <div id="title-code" class="head-section">
-              Source Code
-              <div class="">
-                  {{ statement }}
-
-              </div> <br><br>
-            </div>
-            <input id="launch-button" class="head-section" type="submit" value="Launch" />
-            {% block code %}
-            {% endblock %}
-        </form>
+      <div class="container">
+        <!-- <div class="jumbotron"> -->
+            <h1>Bug Smash</h1>
     </div>
 
-    <!-- ************ RUNNING ZONE RESULTS ************ -->
+ <div class="container" id="statement">
+     <pre>
+{{ statement }}
+</pre>
+ </div>
+<br><br>
+<div class="container" id="run">
+    <h1>Code</h1>
+    <form method="post" action="{{ url_for(target) }}">
+
+    <textarea id="text-code" name="code" style="float:left;" rows={{ rows }} cols={{ cols }}>
+    {{ code }}
+    </textarea><br/>
+
+    <textarea name="ip" rows="8" cols="40" style="float:right;" placeholder="Input Box"></textarea>
+<center>    <input id="launch-button" class="head-section" type="submit" value="Run Code" /></center>
+    </form>
+</div>
+<p>&nbsp</p>
+<div class="container">
 
     <div id="result">
-        {% block run %}
-        {% endblock %}
+        <br><br><br>
+        <textarea id="text-result" rows="5" cols="70" readonly style="margin-top:30px;">{{ resrun }}</textarea>
     </div>
+</div>
+<div class="container">
+    <br><br><br>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="display:block;margin:0 auto; ">
+     <center> <div class="btn-group mr-2" role="group" aria-label="First group">
+    <a href="/run1">    <button type="button" class="btn btn-secondary">1</button></a>
+    <a href="/run2">    <button type="button" class="btn btn-secondary">2</button></a>
+    <a href="/run3">    <button type="button" class="btn btn-secondary">3</button></a>
+    <a href="/run4">    <button type="button" class="btn btn-secondary">4</button></a>
+      </div></center>
+  </div>
 
-<div id="compile">
-    <center><a href="/{{next}}"> <button type="button" name="NEXT">Next Question</button></a></center>
 </div>
 
-</body>
+
+
+    <!-- Optional JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
 </html>

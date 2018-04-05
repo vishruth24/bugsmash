@@ -1,0 +1,21 @@
+h1{
+    text-align:center;
+    font-family:fantasy;
+    background-color: #ffffff;
+opacity:0.6;
+}
+
+div#statement{
+    background-color: #ffffff;
+opacity:0.6;
+font-size: 20px;
+}
+
+#text-code{
+    width: 500px;
+    font-size:20px;
+}
+
+#result{
+    font-size: 20px;
+}
